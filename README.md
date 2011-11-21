@@ -2,7 +2,7 @@
 
 ## Maintainer Contact 
  * Will Rossiter 
-   <will (dot) rossiter (at) gmail (dot) com>
+   <will (at) fullscreen (dot) io>
 	
 ## Requirements
  * SilverStripe 2.3 or newer.
