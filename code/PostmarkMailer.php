@@ -94,7 +94,9 @@ class PostmarkMailer extends Mailer {
 				
 					if($addresses) {
 						foreach($addresses as $address) {
-							$mail->add{$header}($address);
+							$func = "add{$header}";
+							
+							$mail->$func($address);
 						}
 					}
 				}
