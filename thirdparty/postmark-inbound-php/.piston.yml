@@ -1,0 +1,8 @@
+--- 
+format: 1
+repository_url: https://github.com/jjaffeux/postmark-inbound-php.git
+repository_class: Piston::Git::Repository
+lock: false
+handler: 
+  branch: master
+  commit: 54e6b5813efc050471c47a0c7304b87f6f5a7177
