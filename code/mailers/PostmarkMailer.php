@@ -1,10 +1,10 @@
 <?php
 
 /**
- * A {@link Mailer} subclass to handle sending emails through the 
- * Postmark webservice API rather then send_mail().
+ * A {@link Mailer} subclass to handle sending emails through the Postmark 
+ * webservice API rather then send_mail().
  *
- * @author Will Rossiter <will (dot) rossiter (at) gmail (dot) com>
+ * @package postmarkmailer
  */
 
 class PostmarkMailer extends Mailer {
@@ -63,20 +63,25 @@ class PostmarkMailer extends Mailer {
 		
 		foreach($required as $const) {
 			if(!defined($const)) {
-				user_error('Please set '. $const .' in your _config file', E_USER_ERROR);
+				user_error('Please define '. $const, E_USER_ERROR);
 			}
 		}
 		
-		require_once('../postmarkmailer/thirdparty/postmark-php/Postmark.php');
+		require_once(dirname(dirname(dirname(__FILE__))) .'/thirdparty/postmark-php/Postmark.php');
 		
 		
 		$mail = Mail_Postmark::compose()
 			->subject($subject);
 		
 		$to = self::parse_email_addresses($to);
-		if(!$to) throw new PostmarkMailerException('No recipient set for email.', E_USER_ERROR);
 		
-		foreach($to as $address) $mail->addTo($address);
+		if(!$to) {
+			throw new PostmarkMailerException('No recipient set for email.', E_USER_ERROR);
+		}
+		
+		foreach($to as $address) { 
+			$mail->addTo($address);
+		}
 		
 		if($attachedFiles) {
 			foreach($attachedFiles as $file) {
@@ -110,4 +115,6 @@ class PostmarkMailer extends Mailer {
 /**
  * @package postmarkmailer
  */
-class PostmarkMailerException extends Exception {}
+class PostmarkMailerException extends Exception {
+
+}

@@ -2,6 +2,7 @@
 
 /**
  * @package postmarkmailer
+ * @subpackage tests
  */
 
 class PostmarkMailerTest extends SapphireTest {
