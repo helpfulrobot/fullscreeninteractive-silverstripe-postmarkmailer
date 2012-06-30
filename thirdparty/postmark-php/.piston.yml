@@ -1,8 +1,8 @@
 --- 
-format: 1
-handler: 
-  commit: 3ef5354e730a11a402d902e6788ea0a0afb4bd09
-  branch: master
 lock: false
-repository_class: Piston::Git::Repository
 repository_url: https://github.com/Znarkus/postmark-php.git
+format: 1
+repository_class: Piston::Git::Repository
+handler: 
+  branch: master
+  commit: 7a199784c33a2659147fa4a0b5651bd7bd7e3aab
