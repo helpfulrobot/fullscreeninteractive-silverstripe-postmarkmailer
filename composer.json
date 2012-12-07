@@ -1,0 +1,16 @@
+{
+    "name": "fullscreeninteractive/silverstripe-postmarkmailer",
+    "type": "silverstripe-module",
+    "description": "SilverStripe Module for sending email via Postmark",
+    "keywords": ["silverstripe","postmark", "email"],
+    "homepage": "https://github.com/fullscreeninteractive/silverstripe-postmarkmailer",
+    "license": "BSD",
+    "authors": [{
+        "name": "Fullscreen Interactive Limited",
+        "email": "hello@fullscreen.io",
+        "homepage": "http://fullscreen.io"
+    }],
+    "require": {
+        "silverstripe/framework": "*"
+    }
+}
