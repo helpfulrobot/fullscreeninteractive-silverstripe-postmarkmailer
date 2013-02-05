@@ -13,5 +13,8 @@
     }],
     "require": {
         "silverstripe/framework": "*"
+    },
+    "extra": {
+        "installer-name": "postmarkmailer"
     }
 }
