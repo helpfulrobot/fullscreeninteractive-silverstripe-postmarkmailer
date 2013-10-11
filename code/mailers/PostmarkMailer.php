@@ -47,7 +47,7 @@ class PostmarkMailer extends Mailer {
 	 * @todo Pull out the given names.
 	 */
 	public static function parse_email_addresses($emails) {
-		preg_match_all("/[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/i", $emails, $matches);
+		preg_match_all("/[\._a-zA-Z0-9-\+]+@[\._a-zA-Z0-9-]+/i", $emails, $matches);
 		
 		return $matches[0];
 	}
